@@ -1,3 +1,12 @@
+// if you like my work
+// then please subscribe to Coding Pillow as a token of appreciation!
+// and star this repo
+// it will make my day :)
+
+// Link - https://www.youtube.com/channel/UCpMMxmD0UWep2B7TfHyn
+
+
+
 import java.util.*;
 
 class Main {
