@@ -4,7 +4,7 @@ class Main {
    // maximum size
    static int maxSize = 5;
    // my queue
-   static int queue[] = new int[maxSize];
+   static int queue[];
    // counter for the number of elements
    static int c = 0;
    // front point to the first space of the queue
@@ -59,7 +59,7 @@ class Main {
       System.out.println("\nRear at:\n" + rear);
       // traversing from front to rear
       System.out.println("\n\nThe queue is displayed below: \n");
-      
+
       // first element will start from front
       int i = front;
       // loop will go for the number of elements, for that j is taken
@@ -74,7 +74,10 @@ class Main {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
       System.out.println("\nSet your queue size:\n");
+      // setting max size
       maxSize = sc.nextInt();
+      // creating queue
+      queue = new int[maxSize];
       int ch = 1;
       while (ch != 4) {
          System.out.println("\n1.Insert at rear\n2.Delete from front\n3.Display\n4.Exit\n");
