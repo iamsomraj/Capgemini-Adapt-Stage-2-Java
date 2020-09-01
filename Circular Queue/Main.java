@@ -1,5 +1,5 @@
 // if you like my work
-// then please subscribe to Coding Pillow as a token of appreciation!
+// then please subscribe to Coding Pillow as a token of appreciation
 // and star this repo
 // it will make my day :)
 
