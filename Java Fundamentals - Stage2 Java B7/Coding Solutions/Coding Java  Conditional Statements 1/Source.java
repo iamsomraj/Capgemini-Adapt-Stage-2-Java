@@ -1,3 +1,5 @@
+// star this repo if you find this useful :)
+
 import java.util.Scanner;
 
 public class Source {
