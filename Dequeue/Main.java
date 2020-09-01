@@ -1,10 +1,9 @@
 // if you like my work
-// then please subscribe to Coding Pillow as a token of appreciation!
+// then please subscribe to Coding Pillow as a token of appreciation
 // and star this repo
 // it will make my day :)
 
 // Link - https://www.youtube.com/channel/UCpMMxmD0UWep2B7TfHynvdQ/
-
 
 import java.util.*;
 
@@ -65,7 +64,6 @@ class Main {
          rear++;
          // set the item in rear
          dequeue[rear] = item;
-         return;
       } else if (front != 0) {
          // when front is not at the first place
          // dec front
