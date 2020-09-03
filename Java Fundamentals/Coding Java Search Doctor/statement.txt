@@ -1,0 +1,75 @@
+Complete the application as per the below design to search for doctors based on speciality/years of experience.
+
+The application consists of 3 classes : Doctor, DoctorService and SearchDoctorApp. Complete the given classes as below.
+
+class Doctor This pre-written class contains the instance variables: name, speciality and experience, Getters/Setters, Constructors and overridden toString method. This class may need some changes based on the requirement.
+
+class DoctorService - Contains an instance variable doctorsRepository of type List<Doctor>, which can be initialized using the constructor provided. Create the below methods in this class, for searching doctors from the doctorsRepository List
+
+
+
+getExperiencedDoctors(int):List<Doctor>
+
+- This method takes years of experience as input parameter and returns a List of Doctors, who have experience equal to or more than the input parameter
+- The returned List should be sorted in ascending order of speciality and descending order of experience for a speciality. (This should be natural sorting order of Doctor class) 
+
+getSpecialityDoctor(String):Set<Doctor>
+- This method takes speciality(case insensitive) as input parameter and returns a Set of Doctors who have this speciality
+- The returned Set should be sorted in ascending order of name of Doctor
+class SearchDoctorApp This class contains a static variable doctorsData which is initialized with details of 9 doctors in the below format.
+
+
+
+name-speciality-experience;name-speciality-experience;...
+Note: Do not change the data provided in static block
+
+Do the following in the main method
+
+
+
+Create Doctor objects using the data present in doctorsData variable and add these objects to a ArrayList of Doctors
+Initialize the doctorsRepository variable of DoctorService with the above ArrayList
+Accept 1 or 2 as choice from the user through Console.
+If choice is 1, accept years of experience as second input. Invoke appropriate method of DoctorService and display the doctors as per the below format
+If choice is 2, accept speciality as second input. Invoke appropriate method of DoctorService and display the doctors as per the below format
+Display "No Doctors Found", if there are no doctors matching the search criteria
+Display "Invalid Choice", if the first input is not 1 or 2
+Example
+Sample Input:
+1 10
+
+Expected Output:
+            Jim      Cardiology    25
+          David     Dermatology    15
+           John     Dermatology    10
+            Amy      Pediatrics    16
+          Mavis      Pediatrics    11
+Sample Input:
+1 30
+
+Expected Output:
+No Doctors Found
+Sample Input:
+2 Cardiology
+
+Expected Output:
+            Jim      Cardiology    25
+Hints/Tips
+Natural order of sorting is obtained using Comparable Interface
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecations
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of whitespace/trailing whitespace
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+
+
+EXECUTION TIME LIMIT
+Default.

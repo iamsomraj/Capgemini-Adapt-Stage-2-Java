@@ -1,6 +1,13 @@
-# Adapt Solutions
+# Adapt Stage 2 Java
 
-This is a repository, containing the solutions of Adapt. I have made this repo for only educational purpose of mine.
+This is a repository, containing the solutions of Adapt - Stage 2 - Java . I have made this repo for only educational purpose of mine.
+
+## Contents ( to be updated )
+
+1. Circular Queue
+2. Dequeue
+3. Coding Solutions
+4. Sprint 3 - not finished - incomplete problems
 
 ## Developer
 
