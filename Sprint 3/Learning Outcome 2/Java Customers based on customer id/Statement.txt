@@ -1,0 +1,109 @@
+1.      Create a program with multi-dimensional array to store customerDetails (customerId,name ,address) array. This program should sort the customer based on the customer id.
+
+
+
+create a instance array variable with the name customerDetails and this array should be a multi-dimensional array , the size of an array should be of 5.
+get the input for the customer throught console input and store the information in customerDetails array using createCustomer method which takes the array of customer elements.
+create a method to getCustomer() method which will return the array in a sorted order based on customer id;
+call the getCustomer method and print the information
+
+
+Sample Input
+
+105
+Prabu
+Chennai
+102
+Krithick
+Bangalore
+205
+Kiran
+Mumbai
+202
+Shravan
+Pune
+252
+Chandrav
+Delhi
+
+Sample output
+102 Krithick Bangalore 
+105 Prabu Chennai 
+202 Shravan Pune 
+205  Kiran  Mumbai 
+252 Chandrav Delhi 
+
+
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.1.      Create a program with multi-dimensional array to store customerDetails (customerId,name ,address) array. This program should sort the customer based on the customer id.
+
+
+
+create a instance array variable with the name customerDetails and this array should be a multi-dimensional array , the size of an array should be of 5.
+get the input for the customer throught console input and store the information in customerDetails array using createCustomer method which takes the array of customer elements.
+create a method to getCustomer() method which will return the array in a sorted order based on customer id;
+call the getCustomer method and print the information
+
+
+Sample Input
+
+105
+Prabu
+Chennai
+102
+Krithick
+Bangalore
+205
+Kiran
+Mumbai
+202
+Shravan
+Pune
+252
+Chandrav
+Delhi
+
+Sample output
+102 Krithick Bangalore 
+105 Prabu Chennai 
+202 Shravan Pune 
+205  Kiran  Mumbai 
+252 Chandrav Delhi 
+
+
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.

@@ -7,7 +7,13 @@ This is a repository, containing the solutions of Adapt - Stage 2 - Java . I hav
 1. Circular Queue
 2. Dequeue
 3. Coding Solutions
-4. Sprint 3 - not finished - incomplete problems
+4. Sprint 3 Coding Solutions
+
+## Objectives
+
+1. Learning Data Structures
+2. Implementing searching techniques including Binary Search, Linear Search
+3. Using sorting techniques like Bubble sort
 
 ## Developer
 
