@@ -2,6 +2,8 @@
 
 This is a repository, containing the solutions of Adapt - Stage 2 - Java . I have made this repo for only educational purpose of mine.
 
+[![HitCount](http://hits.dwyl.com/iamsomraj/Adapt-Stage-2-Java.svg)](http://hits.dwyl.com/iamsomraj/Adapt-Stage-2-Java)
+
 ## Contents ( to be updated )
 
 1. Circular Queue
