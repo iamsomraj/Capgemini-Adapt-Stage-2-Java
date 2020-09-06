@@ -2,7 +2,7 @@
 
 This is a repository, containing the solutions of Adapt - Stage 2 - Java . I have made this repo for only educational purpose of mine.
 
-## Contents ( to be updated )
+## Contents
 
 1. Circular Queue
 2. Dequeue
