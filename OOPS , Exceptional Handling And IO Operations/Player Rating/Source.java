@@ -1,5 +1,3 @@
-import java.util.*;
-
 abstract class Player {
 
    String firstName;
