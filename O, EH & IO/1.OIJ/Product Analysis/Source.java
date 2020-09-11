@@ -1,7 +1,3 @@
-// Success rate : 83 %
-// getting null pointer exception
-// test case 6
-
 import java.util.*;
 
 class Product {
@@ -99,9 +95,10 @@ class ProductService {
    public static Product findMaxPriceProduct(String category) {
 
       ArrayList<Product> prdts = new ArrayList<Product>();
-
       for (Product pdt : ProductData.getProducts()) {
-         if (pdt.getCategory().equals(category)) {
+         // you have to turn the category into lowercase
+         // this is not mentioned in the statement
+         if (pdt.getCategory().equals(category.toLowerCase())) {
             prdts.add(pdt);
          }
       }
