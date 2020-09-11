@@ -1,0 +1,129 @@
+Create an interface named Shape in file with the following abstract methods
+
+
+
+getArea() : double ( return type is double)
+getPerimeter() : double
+Create an abstract class named AbstractShape which implements
+ Shape interface with the below private instance variable
+
+
+
+colour:String
+create parameterized constructor
+Override toString() method to return 
+String as per below format
+colour=X
+where X represents value of colour variable
+
+Create a concrete subclass of AbstractShape
+ named Rectangle with the below private instance variables
+
+
+
+
+
+length:int
+breadth:int
+create constructor with 3 parameters to initialize colour, 
+length and breadth properties of Rectangle in the given sequence
+implement the inherited methods getArea and getPerimeter 
+using appropriate formulas for Rectangle[Refer Hints Section]
+Override toString to return String as per below format
+Rectangle [colour=X, length=X, breadth=X]
+where X represent respective values of variables
+
+Create another concrete subclass of AbstractShape 
+named Circle with the below private instance variable
+
+
+
+radius:int
+create constructor with 2 parameters to initialize colour 
+and radius properties of Circle in the given sequence
+implement the inherited methods getArea and getPerimeter 
+using appropriate formulas for Circle[Refer Hints Section]
+Override toString to return String as per below format
+Circle [colour=X, radius=X]
+where X represent respective values of variables
+
+In the class Source, do the following
+
+Create a static method named printShape which should 
+ able to take any shape object as parameter. This method
+  should display the area and perimeter of the input 
+  shape object in the below format.
+
+
+
+Area: X,Perimeter: X
+where X represent the respective values.cThe area and
+ perimeter should be rounded to the nearest integer and 
+ displayed
+
+In the main method, do the following
+
+
+
+Accept first input as CIRCLE or RECTANGLE.
+If first input is CIRCLE, Accept colour and 
+radius
+If first input is RECTANGLE, Accept colour, 
+length and breadth
+Create object of Circle or Rectangle based on 
+first input and print the details of object.
+Call printShape to print the Area and Perimeter.
+Note: Use Console to accept input
+
+Refer Example section for Input and output format
+
+
+
+Example
+Sample Input:
+CIRCLE
+RED 5
+
+Expected Output:
+Circle [colour=RED, radius=5]
+Area: 79,Perimeter: 31
+Sample Input:
+RECTANGLE
+GREEN 10 5
+
+Expected Output:
+Rectangle [colour=GREEN, length=10, breadth=5]
+Area: 50,Perimeter: 30
+Hints/Tips
+Circle Formulas
+Area 		: Pi x r x r
+Perimeter	: 2 x Pi x r
+Rectangle Formulas
+Area 		: l x b
+Perimeter 	: 2 x (l+b)
+Use static variable PI of Math class
+Use Math.round(..) for rounding a double
+ to nearest integer. Rounding should be 
+ done in printShape method
+Instructions
+Do not change the provided class/method 
+names unless instructed
+Ensure your code compiles without 
+any errors/warning/deprecations
+Follow best practices while coding
+Avoid too many & unnecessary usage 
+of white spaces (newline, spaces, tabs, ...), 
+except to make the code readable
+Use appropriate comments at appropriate
+ places in your exercise, to explain the logic,
+ rational, solutions, so that evaluator can know them
+Try to retain the original code given 
+ the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of whitespace/trailing whitespace
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
