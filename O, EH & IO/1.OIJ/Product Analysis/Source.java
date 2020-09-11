@@ -51,7 +51,6 @@ class Product {
 
    @Override
    public String toString() {
-      // TODO Auto-generated method stub
       return (this.getProdCode() + " | " + this.getProdName() + " | " + this.getPrice());
 
    }
