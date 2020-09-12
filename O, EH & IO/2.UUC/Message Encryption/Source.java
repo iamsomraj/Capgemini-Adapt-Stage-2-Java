@@ -35,11 +35,7 @@ class Source {
             arr[i] += 1;
          }
       }
-      String encryptedMessage = "";
-      for (int i = 0; i < arr.length; i++) {
-         encryptedMessage += arr[i];
-      }
-      return encryptedMessage;
+      return String.valueOf(arr);
    }
 
    public static void main(String[] args) {
