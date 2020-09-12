@@ -1,0 +1,55 @@
+Problem Statement: Message Encryption
+In the class Source create the following public static method:
+
+
+
+ encrypt(String message): String	 
+The input message String to the method should be encrypted as per the below rules. encrypted message should be returned back.
+message should be converted to lower case
+a and e should be replaced with each other
+o and u should be replaced with each other
+i should be replaced with ! and space should be replaced with +
+In case of Consonant, It should be replaced with next immediate consonant
+In case of digit, it should be replaced with next digit
+z should be replaced with b and 0 with 1
+Assume that the input string is alphanumeric without special characters
+Do the following in the main method of Source
+
+
+
+Accept a message from the console and display the encrypted message
+Example
+Sample Input:
+good Morning
+
+Expected Output:
+huuf+nusp!ph
+Sample Input:
+silence please
+
+Expected Output:
+t!mapda+qmaeta
+Sample Input:
+call at 4pm
+
+Expected Output:
+demm+ev+5qn
+Hints/Tips
+use String and StringBuilder/Buffer methods
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecations
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of whitespace/trailing whitespace
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+
+
+EXECUTION TIME LIMIT
+Default.
