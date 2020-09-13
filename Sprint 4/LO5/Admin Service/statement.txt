@@ -1,0 +1,61 @@
+1.    Create an interface AdminService. Add CRUD methods such as addToy(Toy toy) , updateToy(Toy toy), deleteToy(int toyId) and getToys() (will return array of toys) . These methods will be for adding new toys, modifying existing toys, deleting toys, retrieving the details of all the toys (you should use the same Toy class with all the attributes as mentioned in the given structure)
+
+
+
+2.      AdminsServiceImpl class with the static array named toyArray and provide implementation AdminService interfaces (override all the methods listed in interface).
+
+
+
+3,Override toString method which will return the concatenated String (toyname,type,price and rentalAmount)
+
+
+
+4.user must be asked to give their choice to perform different operations as below
+
+1. Add Toys
+2. UpdateToys
+3 Delete Toys
+4 Display Toys
+
+
+Note:Below is the sample input for adding a toy to a toyArray and the output is a toy object since only one object is added hence the output is for a single toy . when multiple toys are added the getToys method should return all the toys
+
+
+
+Sample Input
+120
+Rubber Ducky
+Toy
+1
+3
+200
+20
+20
+200
+30
+
+Sample output
+Toy Name: Rubber Ducky
+Toy Type: Toy
+Quantity: 200
+RentalAmount: 20
+ 
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.

@@ -1,42 +1,14 @@
-import java.util.Scanner;
+// -___-
+import java.util.*;
 
-class Admin {
-   private String email;
-   private String password;
-   private String name;
+interface AdminService {
+   public void addToy(Toy toy);
 
-   public String getEmail() {
-      return email;
-   }
+   public void updateToy(Toy toy);
 
-   public String getName() {
-      return name;
-   }
+   public void deleteToy(int toyId);
 
-   public String getPassword() {
-      return password;
-   }
-
-   public void setEmail(String email) {
-      this.email = email;
-   }
-
-   public void setName(String name) {
-      this.name = name;
-   }
-
-   public void setPassword(String password) {
-      this.password = password;
-   }
-
-   public Admin(String email, String password, String name) {
-      this.email = email;
-      this.password = password;
-      this.name = name;
-   }
-
-   public Admin() {
-   }
+   public Toy[] getToys(Toy toy);
 }
 
 class Toy {
@@ -137,20 +109,68 @@ class Toy {
 
    @Override
    public String toString() {
-      String result = "ID: " + toyId + "\n";
+      String result = "";
       result += "ToyName: " + toyName + "\n";
       result += "ToyType: " + toyType + "\n";
-      result += "Min Age: " + minAge + "\n";
-      result += "Max Age: " + maxAge + "\n";
-      result += "Price: " + price + "\n";
       result += "Quantity: " + quantity + "\n";
-      result += "RentalAmount: " + rentalAmount + "\n";
-      result += "Refundable Deposit: " + refundableDeposit;
+      result += "RentalAmount: " + rentalAmount;
       return result;
    }
 
    public Toy() {
-      
+
+   }
+
+}
+
+class AdminServiceImpl implements AdminService {
+   public static Toy[] toyArray;
+   public static ArrayList<Toy> toys = new ArrayList<Toy>();
+
+   @Override
+   public void addToy(Toy toy) {
+      toys.add(toy);
+      updateToyArray();
+   }
+
+   @Override
+   public void deleteToy(int toyId) {
+      for (int i = 0; i < toys.size(); i++) {
+         if (toys.get(i).getToyId() == toyId) {
+            toys.remove(i);
+         }
+      }
+      updateToyArray();
+   }
+
+   @Override
+   public Toy[] getToys(Toy toy) {
+      return toyArray;
+   }
+
+   @Override
+   public void updateToy(Toy toy) {
+      for (int i = 0; i < toys.size(); i++) {
+         if (toys.get(i).getToyId() == toy.getToyId()) {
+            toys.set(i, toy);
+         }
+      }
+      updateToyArray();
+   }
+
+   public void display() {
+      for (Toy toy : toyArray) {
+         System.out.println(toy);
+      }
+   }
+
+   public static void updateToyArray() {
+      toyArray = new Toy[toys.size()];
+      int i = 0;
+      for (Toy t : toys) {
+         toyArray[i] = t;
+         i++;
+      }
    }
 
 }
@@ -178,22 +198,19 @@ public class Source {
 
    public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
-      int toyId = scanner.nextInt();
+      int toyId = Integer.parseInt(scanner.nextLine());
       String toyName = scanner.nextLine();
-      scanner.nextLine();
       String toyType = scanner.nextLine();
-      int minAge = scanner.nextInt();
-      int maxAge = scanner.nextInt();
-      float price = scanner.nextFloat();
-      int quantity = scanner.nextInt();
-      float rentalAmount = scanner.nextFloat();
-      float refundableDeposit = scanner.nextFloat();
+      int minAge = Integer.parseInt(scanner.nextLine());
+      int maxAge = Integer.parseInt(scanner.nextLine());
+      float price = Float.parseFloat(scanner.nextLine());
+      int quantity = Integer.parseInt(scanner.nextLine());
+      float rentalAmount = Float.parseFloat(scanner.nextLine());
+      float refundableDeposit = Float.parseFloat(scanner.nextLine());
       Toy toy = new Toy(toyId, toyName, toyType, minAge, maxAge, price, quantity, rentalAmount, refundableDeposit);
-      Toy toy2 = new Toy();
-      Admin admin = new Admin("admin", "admin", "admin");
-      Admin admin2 = new Admin();
-      System.out.println(toy);
+      AdminServiceImpl adminServiceImpl = new AdminServiceImpl();
+      adminServiceImpl.addToy(toy);
+      adminServiceImpl.display();
    }
-
 
 }
