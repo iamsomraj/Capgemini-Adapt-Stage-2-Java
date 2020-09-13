@@ -1,0 +1,49 @@
+1 Create Customer and Address class as per the given structure with setter and getter methods and create the object for Customer and Address object use the setter methods to pass the value to the attributes and print the information.
+
+Note:Customer and Address should have has a relationship between the classes
+
+
+
+2 Create a constructor for Customer and Address with the attributes as parameter. create the objects using parameterized constructor in the main method of the Source class.
+
+
+
+3.Override toString method and it should return the concatenated string of the class attributes
+
+
+
+
+
+
+
+Sample Input
+100
+Chandrav
+Jai@123
+Jai@gmail.com
+Chennai
+TamilNadu
+600045
+India
+
+Sample output
+
+100 Chandrav Jai@123 Jai@gmail.com
+Chennai TamilNadu 600045 India
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
