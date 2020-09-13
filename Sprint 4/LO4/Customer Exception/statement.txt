@@ -1,0 +1,46 @@
+Create a Toy class with id, name,minAge,maxAge attribute with setter and getter methods
+
+Create a constructor for the class with the attributes
+setter method of the minAge ,maxAge and the constructor should throw the InvalidAgeException if the age is less than 0 and greater than 12
+if the input is valid print the toy name otherwise print the exception message
+
+
+
+
+
+
+Sample Input
+1001
+Car
+2
+8
+Sample output
+Car
+
+Sample Input
+1002
+Rubber Dcukey
+4
+13
+
+Sample output
+InvalidAgeException
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
