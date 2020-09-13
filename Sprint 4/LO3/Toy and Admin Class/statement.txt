@@ -1,0 +1,50 @@
+1.      Create Admin and Toy class as per the given structure with setter and getter methods and create the object for Admin and Toy object use the setter methods to pass the value to the attributes and print the information.
+
+
+
+2 Create a constructor for Admin and Toy with the attributes as parameter. create the objects using parameterized constructor in the main method of the Source class.
+
+
+
+
+
+
+
+Sample Input
+120
+Rubber Ducky
+Toy
+1
+3
+200
+20
+20
+200
+Sample output
+ID: 120
+ToyName: Rubber Ducky
+ToyType: Toy
+Min Age: 1
+Max Age: 3
+Price: 200.0
+Quanitity: 20
+RefundableAmount: 20.0
+Refundable Deposit: 200.0
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
