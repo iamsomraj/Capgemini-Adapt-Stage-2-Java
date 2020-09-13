@@ -1,3 +1,6 @@
+// not getting full points
+// if one can help, then go on :)
+
 import java.util.*;
 
 class Customer {
