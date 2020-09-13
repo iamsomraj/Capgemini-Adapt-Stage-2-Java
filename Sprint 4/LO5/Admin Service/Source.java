@@ -1,4 +1,3 @@
-// -___-
 // test cases have syntax error
 
 import java.util.*;

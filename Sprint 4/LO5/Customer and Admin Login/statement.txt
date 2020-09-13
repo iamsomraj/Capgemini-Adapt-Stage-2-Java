@@ -1,0 +1,61 @@
+DESCRIPTION
+1.  Provide login facility for admin and customer. After successful login, display respective console dashboards (menu). Now user can perform his respective actions.
+
+2 get the console input from the user 1 for Customer and 2 for Admin , Name and password to validate the user based on the role functionalities should be display as below.
+
+Customers
+
+1.Rent Toys
+
+2.Rental Information for the logged in Customer.
+
+
+
+Admin
+
+1.Insert Toys
+
+2.Update Toys
+
+3.Delete Toys
+
+4,Search Toys
+
+Note:﻿Create the classess as per the given structure in the document
+
+
+Sample Input
+1
+Krithick
+xxxxxxxx﻿
+Sample output
+1.Rent Toys
+2.Rental Information 
+
+Sample Input
+2
+admin
+xxxxxxxxxxxx
+Sample output﻿﻿﻿﻿﻿ 
+1.Insert Toys
+2.Update Toys
+3.Delete Toys
+4.Search Toys
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
