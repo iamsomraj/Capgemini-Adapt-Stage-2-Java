@@ -1,5 +1,7 @@
 // not getting full points
 // if one can help, then go on :)
+// 50 %
+// test cases have syntax error XD
 
 import java.util.*;
 
@@ -52,6 +54,14 @@ class Customer {
    }
 
    public void setPassword(String password) {
+      this.password = password;
+   }
+
+   public String getpassword() {
+      return password;
+   }
+
+   public void setpassword(String password) {
       this.password = password;
    }
 
