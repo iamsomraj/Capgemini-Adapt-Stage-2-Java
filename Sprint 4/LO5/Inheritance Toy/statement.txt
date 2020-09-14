@@ -1,0 +1,57 @@
+DESCRIPTION
+ Create classes like ElectronicToy , MusicalToy as a subclass of Toy and add attributes such as numberOfBatteries , operatingMode (remote/manual) for ElectronicToy and noOfSpeakers for Musical toy
+create parameterized constructor to pass all the values for the object
+get the input from the user 1 for ElectronicToy and 2 for Musical Toy
+override the toString method and con-cat the Name , type , Mode , Batteries for ElectronicToy , Name type and noOfSpeakers for Musical Toy
+
+
+
+Sample Input
+1
+100
+Remote Car
+Electronic
+4
+12
+500
+20
+100
+500
+5
+Remote
+
+15
+
+Sample output
+Name : Remote Car
+Type : Electronic
+Mode : Remote
+Batteries : 5
+
+Input 2:
+2
+100
+Ringing Doll
+Electronic
+4
+12
+500
+20
+100
+500
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
