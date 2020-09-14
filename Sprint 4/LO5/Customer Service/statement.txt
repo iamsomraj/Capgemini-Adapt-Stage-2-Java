@@ -1,0 +1,39 @@
+1.    Create/Modify an interface CustomerService and add methods such as rent(int toyId) and display(). Please note that the purpose of rent method will be to add the details of rented toys and the displaymethod should display the toys rented by the customer.
+
+
+
+2.      Create/Modify CustomerServiceImpl class with the static array customerToysRentalInfo and availableToys array. provide implementation to CustomerService (override all the methods listed in interface).(you should use the same Customer class with all the attributes as mentioned in the given structure)assuming the program is accessed by the customer.
+
+
+
+This program should display all the toys to the user and user can rent the toy by entering the toyid from console
+The display method display the rented toy by the customer as below
+
+
+Sample Input
+120
+Sample output
+Toy Name: Rubber Ducky
+Toy Type: Toy
+Quantity: 200
+RentalAmount: 20﻿
+﻿﻿﻿ 
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
