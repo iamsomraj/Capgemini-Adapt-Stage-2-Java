@@ -1,0 +1,45 @@
+1.      Search method should be overloaded with different parameters id and name for both CustomerService and AdminService to get the customer/toy Object
+
+
+
+2.override toString method to and return the concatenated values such as name of the custmerId/toyId and customerName/toyName
+
+
+
+3 get the console input from the user 1.for search customer 2 for search toys
+
+and return the object.
+
+
+
+Sample Input
+2
+120
+Sample output
+Id: 120﻿
+Toy Name: Rubber Ducky
+Sample Input
+1
+100
+S﻿﻿﻿﻿﻿ample Output
+Id:﻿ 100
+Name: Chandrav﻿
+
+
+
+
+Instructions
+Do not change the provided class/method names unless instructed
+Ensure your code compiles without any errors/warning/deprecation
+Follow best practices while coding
+Avoid too many & unnecessary usage of white spaces (newline, spaces, tabs, ...), except to make the code readable
+Use appropriate comments at appropriate places in your exercise, to explain the logic, rational, solutions, so that evaluator can know them
+Try to retain the original code given in the exercise, to avoid any issues in compiling & running your programs
+Always test the program thoroughly, before saving/submitting exercises/project
+For any issues with your exercise, contact your coach
+Warnings
+Take care of white space/trailing white space
+Trim the output and avoid special characters
+Avoid printing unnecessary values other than expected/asked output
+EXECUTION TIME LIMIT
+Default.
