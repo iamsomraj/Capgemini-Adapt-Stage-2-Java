@@ -1,4 +1,5 @@
-// no score
+// 0 score
+
 import java.util.*;
 
 class Toy {
@@ -101,10 +102,7 @@ class Toy {
    public String toString() {
       String result = "";
       result += "Id: " + toyId + "\n";
-      result += "Toy Name: " + toyName + "\n";
-      result += "ToyType: " + toyType + "\n";
-      result += "Quantity: " + quantity + "\n";
-      result += "RentalAmount: " + rentalAmount;
+      result += "Toy Name: " + toyName;
       return result;
    }
 
@@ -116,10 +114,14 @@ class Toy {
 
 interface AdminService {
    boolean validateAdmin(String email, String password);
+
+   Toy searchToy(int toyId);
 }
 
 interface CustomerService {
    boolean validateCustomer(String email, String password);
+
+   Customer searchCustomer(int CustomerId);
 }
 
 class Customer {
@@ -179,8 +181,7 @@ class Customer {
 
    @Override
    public String toString() {
-      return "Customer [address=" + address + ", customerId=" + customerId + ", customerName=" + customerName
-            + ", email=" + email + ", password=" + password + "]";
+      return "Id: " + customerId + "\nName: " + customerName;
    }
 
 }
@@ -276,7 +277,7 @@ class CustomerServiceImpl implements CustomerService {
 
    }
 
-   public Customer search(int CustomerId) {
+   public Customer searchCustomer(int CustomerId) {
       for (Customer Customer : customerArray) {
          if (Customer.getCustomerId() == CustomerId) {
             return Customer;
@@ -297,16 +298,16 @@ class CustomerServiceImpl implements CustomerService {
 
 public class Source {
    public static void main(String args[]) {
-      Scanner sc = new Scanner(System.in);
-      int n = sc.nextInt();
+      Scanner scanner = new Scanner(System.in);
+      int n = scanner.nextInt();
       if (n == 1) {
          CustomerServiceImpl customerService = new CustomerServiceImpl();
-         Customer customer = customerService.search(sc.nextInt());
+         Customer customer = customerService.searchCustomer(scanner.nextInt());
          System.out.println(customer);
-      
+
       } else if (n == 2) {
          AdminServiceImpl adminService = new AdminServiceImpl();
-         Toy toy = adminService.searchToy(sc.nextInt());
+         Toy toy = adminService.searchToy(scanner.nextInt());
          System.out.println(toy);
       }
    }

@@ -16,14 +16,14 @@ Sample Input
 2
 120
 Sample output
-Id: 120﻿
+Id: 120
 Toy Name: Rubber Ducky
 Sample Input
 1
 100
-S﻿﻿﻿﻿﻿ample Output
-Id:﻿ 100
-Name: Chandrav﻿
+Sample Output
+Id: 100
+Name: Chandrav
 
 
 
