@@ -1,8 +1,7 @@
-// Surprise Surprise - This is the same question XD
-
+// 100% score
 import java.util.*;
 
-class InvalidAgeException extends Exception {
+class InvalidAgeException extends RuntimeException {
 
    /**
     *
@@ -103,7 +102,7 @@ public class Source {
 
    }
 
-   public static void main(String[] args) throws InvalidAgeException {
+   public static void main(String[] args) throws Exception {
       Scanner scanner = new Scanner(System.in);
       int id = Integer.parseInt(scanner.nextLine());
       String name = scanner.nextLine();
