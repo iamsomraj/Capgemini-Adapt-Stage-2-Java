@@ -1,3 +1,4 @@
+// 100 % score
 import java.util.*;
 
 interface AdminService {

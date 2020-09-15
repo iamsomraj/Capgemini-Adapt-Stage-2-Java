@@ -1,127 +1,34 @@
-// 0 score
+// 50 % score
+import java.util.Scanner;
 
-import java.util.*;
-
-class Toy {
-   private int toyId;
-   private String toyName;
-   private String toyType;
-   private int minAge;
-   private int maxAge;
-   private float price;
-   private int quantity;
-   private float rentalAmount;
-   private float refundableDeposit;
-
-   public int getToyId() {
-      return toyId;
-   }
-
-   public void setToyId(int toyId) {
-      this.toyId = toyId;
-   }
-
-   public String getToyName() {
-      return toyName;
-   }
-
-   public void setToyName(String toyName) {
-      this.toyName = toyName;
-   }
-
-   public String getToyType() {
-      return toyType;
-   }
-
-   public void setToyType(String toyType) {
-      this.toyType = toyType;
-   }
-
-   public int getMinAge() {
-      return minAge;
-   }
-
-   public void setMinAge(int minAge) {
-      this.minAge = minAge;
-   }
-
-   public int getMaxAge() {
-      return maxAge;
-   }
-
-   public void setMaxAge(int maxAge) {
-      this.maxAge = maxAge;
-   }
-
-   public float getPrice() {
-      return price;
-   }
-
-   public void setPrice(float price) {
-      this.price = price;
-   }
-
-   public int getQuantity() {
-      return quantity;
-   }
-
-   public void setQuantity(int quantity) {
-      this.quantity = quantity;
-   }
-
-   public float getRentalAmount() {
-      return rentalAmount;
-   }
-
-   public void setRentalAmount(float rentalAmount) {
-      this.rentalAmount = rentalAmount;
-   }
-
-   public float getRefundableDeposit() {
-      return refundableDeposit;
-   }
-
-   public void setRefundableDeposit(float refundableDeposit) {
-      this.refundableDeposit = refundableDeposit;
-   }
-
-   public Toy(int toyId, String toyName, String toyType, int minAge, int maxAge, float price, int quantity,
-         float rentalAmount, float refundableDeposit) {
-      this.toyId = toyId;
-      this.toyName = toyName;
-      this.toyType = toyType;
-      this.minAge = minAge;
-      this.maxAge = maxAge;
-      this.price = price;
-      this.quantity = quantity;
-      this.rentalAmount = rentalAmount;
-      this.refundableDeposit = refundableDeposit;
-   }
-
-   @Override
-   public String toString() {
-      String result = "";
-      result += "Id: " + toyId + "\n";
-      result += "Toy Name: " + toyName;
-      return result;
-   }
-
-   public Toy() {
-
-   }
-
+abstract class AdminService {
+   abstract Toy searchToy(int id);
 }
 
-interface AdminService {
-   boolean validateAdmin(String email, String password);
-
-   Toy searchToy(int toyId);
+abstract class CustomerService {
+   abstract Customer searchCustomer(int id);
 }
 
-interface CustomerService {
-   boolean validateCustomer(String email, String password);
-
-   Customer searchCustomer(int CustomerId);
+public class Source {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int ch = sc.nextInt();
+      int id = sc.nextInt();
+      String actualresult = "";
+      AdminService asi = new AdminServiceImpl();
+      CustomerService csi = new CustomerServiceImpl();
+      if (ch == 1) {
+         Customer customer = new Customer();
+         customer = csi.searchCustomer(id);
+         actualresult = customer.toString();
+         System.out.println(actualresult);
+      }
+      if (ch == 2) {
+         Toy toy = asi.searchToy(id);
+         actualresult = toy.toString;
+         System.out.println(actualresult);
+      }
+   }
 }
 
 class Customer {
@@ -131,141 +38,78 @@ class Customer {
    private String password;
    private String address;
 
+   public Customer() {
+
+   }
+
    public Customer(int customerId, String customerName, String email, String password, String address) {
+      super();
       this.customerId = customerId;
       this.customerName = customerName;
+      this.email = email;
       this.password = password;
       this.address = address;
-      this.email = email;
-   }
-
-   public String getPassword() {
-      return password;
-   }
-
-   public String getEmail() {
-      return email;
    }
 
    public int getCustomerId() {
       return customerId;
    }
 
-   public void setCustomerId(int customerId) {
-      this.customerId = customerId;
-   }
-
    public String getCustomerName() {
       return customerName;
-   }
-
-   public void setCustomerName(String customerName) {
-      this.customerName = customerName;
-   }
-
-   public void setEmail(String email) {
-      this.email = email;
-   }
-
-   public void setPassword(String password) {
-      this.password = password;
-   }
-
-   public String getAddress() {
-      return address;
-   }
-
-   public void setAddress(String address) {
-      this.address = address;
    }
 
    @Override
    public String toString() {
       return "Id: " + customerId + "\nName: " + customerName;
    }
-
 }
 
-class Admin {
-   private String name;
-   private String email;
-   private String password;
+class Toy {
+   int toyId;
+   String toyName;
+   String toyType;
+   int minAge;
+   int maxAge;
+   double price;
+   int rentalAmt;
+   int refundableDeposit;
+   int quantity;
+   String toString;
 
-   public Admin(String name, String email, String password) {
-      this.password = password;
-      this.name = name;
-      this.email = email;
+   public Toy() {
+
    }
 
-   public String getPassword() {
-      return password;
+   public Toy(int toyId, String toyName, String toyType, int minAge, int maxAge, double price, int rentalAmt,
+         int refundableDeposit, int quantity) {
+      this.toyId = toyId;
+      this.toyName = toyName;
+      this.toyType = toyType;
+      this.minAge = minAge;
+      this.maxAge = maxAge;
+      this.price = price;
+      this.rentalAmt = rentalAmt;
+      this.refundableDeposit = refundableDeposit;
+      this.quantity = quantity;
+      this.toString = "Id: " + this.toyId + "\nToyName: " + this.toyName;
    }
 
-   public String getEmail() {
-      return email;
+   public int getToyId() {
+      return toyId;
    }
 
-   public String getName() {
-      return name;
-   }
-
-   public void setName(String name) {
-      this.name = name;
-   }
-
-   public void setEmail(String email) {
-      this.email = email;
-   }
-
-   public void setPassword(String password) {
-      this.password = password;
+   public String getToyName() {
+      return toyName;
    }
 
    @Override
    public String toString() {
-      return "Admin [email=" + email + ", name=" + name + ", password=" + password + "]";
+      return "Id: " + toyId + "\nToyName: " + toyName;
    }
-
 }
 
-class AdminServiceImpl extends CustomerServiceImpl implements AdminService {
-   static Toy availableToys[] = new Toy[4];
-
-   public static Admin[] adminArray = new Admin[5];
-
-   AdminServiceImpl() {
-      adminArray[0] = new Admin("Krithick", "krithick@gmail.com", "krithi");
-      adminArray[1] = new Admin("Rajan", "rajan@gmail.com", "rajan#345");
-      adminArray[2] = new Admin("Chandrav", "chand@gmail.com", "wel$234");
-      adminArray[3] = new Admin("Ankit", "ankit@gmail.com", "kit@56");
-      adminArray[4] = new Admin("Akilan", "akilan@gmail.com", "ak*76");
-      availableToys[0] = new Toy(120, "Rubber Ducky", "Toy", 1, 3, 200, 20, 20, 200);
-      availableToys[1] = new Toy(130, "Car", "Toy", 1, 5, 100, 30, 20, 100);
-      availableToys[2] = new Toy(150, "Kite", "Toy", 3, 8, 100, 50, 20, 50);
-      availableToys[3] = new Toy(180, "Airplane", "Toy", 4, 7, 500, 30, 50, 20);
-   }
-
-   public boolean validateAdmin(String email, String password) {
-      for (Admin a : adminArray) {
-         if (a.getEmail().equals(email) && a.getPassword().equals(password)) {
-            return true;
-         }
-      }
-      return false;
-   }
-
-   public Toy searchToy(int toyId) {
-      for (Toy toy : availableToys) {
-         if (toy.getToyId() == toyId) {
-            return toy;
-         }
-      }
-      return null;
-   }
-
-}
-
-class CustomerServiceImpl implements CustomerService {
+class CustomerServiceImpl extends CustomerService {
    public static Customer[] customerArray = new Customer[5];
 
    public CustomerServiceImpl() {
@@ -274,42 +118,35 @@ class CustomerServiceImpl implements CustomerService {
       customerArray[2] = new Customer(102, "Rakesh", "rak@mail.com", "rak#45", "Chennai");
       customerArray[3] = new Customer(103, "Rakshan", "shan@mail.com", "an#2", "Mumbai");
       customerArray[4] = new Customer(104, "Virat", "rat@mail.com", "at#45", "Pune");
-
    }
 
-   public Customer searchCustomer(int CustomerId) {
-      for (Customer Customer : customerArray) {
-         if (Customer.getCustomerId() == CustomerId) {
-            return Customer;
+   public Customer searchCustomer(int id) {
+      for (int i = 0; i < 5; i++) {
+         if (customerArray[i].getCustomerId() == id) {
+            return customerArray[i];
          }
       }
       return null;
    }
-
-   public boolean validateCustomer(String email, String password) {
-      for (Customer c : customerArray) {
-         if (c.getEmail().equals(email) && c.getPassword().equals(password)) {
-            return true;
-         }
-      }
-      return false;
-   }
 }
 
-public class Source {
-   public static void main(String args[]) {
-      Scanner scanner = new Scanner(System.in);
-      int n = scanner.nextInt();
-      if (n == 1) {
-         CustomerServiceImpl customerService = new CustomerServiceImpl();
-         Customer customer = customerService.searchCustomer(scanner.nextInt());
-         System.out.println(customer);
+class AdminServiceImpl extends AdminService {
+   static Toy availableToys[] = new Toy[5];
+   Toy toy = new Toy();
 
-      } else if (n == 2) {
-         AdminServiceImpl adminService = new AdminServiceImpl();
-         Toy toy = adminService.searchToy(scanner.nextInt());
-         System.out.println(toy);
-      }
+   AdminServiceImpl() {
+      availableToys[0] = new Toy(120, "Rubber Ducky", "Toy", 1, 3, 200, 20, 20, 200);
+      availableToys[1] = new Toy(130, "Car", "Toy", 1, 5, 100, 30, 20, 100);
+      availableToys[2] = new Toy(150, "Kite", "Toy", 3, 8, 100, 50, 20, 50);
+      availableToys[3] = new Toy(180, "Airplane", "Toy", 4, 7, 500, 30, 50, 20);
    }
 
+   public Toy searchToy(int id) {
+      for (int i = 0; i < 4; i++) {
+         if (availableToys[i].getToyId() == id) {
+            return availableToys[i];
+         }
+      }
+      return null;
+   }
 }
