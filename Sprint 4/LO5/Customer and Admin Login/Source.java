@@ -1,3 +1,5 @@
+// 100 % score
+
 import java.util.Scanner;
 
 interface AdminService {
