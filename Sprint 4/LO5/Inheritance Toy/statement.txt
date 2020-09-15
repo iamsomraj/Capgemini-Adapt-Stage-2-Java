@@ -8,7 +8,6 @@ override the toString method and con-cat the Name , type , Mode , Batteries for 
 
 Sample Input
 1
-100
 Remote Car
 Electronic
 4
@@ -20,25 +19,13 @@ Electronic
 5
 Remote
 
-15
-
 Sample output
 Name : Remote Car
 Type : Electronic
 Mode : Remote
 Batteries : 5
 
-Input 2:
-2
-100
-Ringing Doll
-Electronic
-4
-12
-500
-20
-100
-500
+
 
 Instructions
 Do not change the provided class/method names unless instructed
