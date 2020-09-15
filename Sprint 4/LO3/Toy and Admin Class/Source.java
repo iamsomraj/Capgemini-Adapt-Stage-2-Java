@@ -1,3 +1,6 @@
+// 100 % score
+
+
 import java.util.Scanner;
 
 class Admin {
@@ -189,9 +192,6 @@ public class Source {
       float rentalAmount = scanner.nextFloat();
       float refundableDeposit = scanner.nextFloat();
       Toy toy = new Toy(toyId, toyName, toyType, minAge, maxAge, price, quantity, rentalAmount, refundableDeposit);
-      Toy toy2 = new Toy();
-      Admin admin = new Admin("admin", "admin", "admin");
-      Admin admin2 = new Admin();
       System.out.println(toy);
    }
 
