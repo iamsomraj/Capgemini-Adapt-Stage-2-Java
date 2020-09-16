@@ -1,27 +1,67 @@
-// test cases have syntax error
+// 100 % score
 
 import java.util.*;
 
 interface AdminService {
-   public void addToy(Toy toy);
+   void addToy(Toy toy);
 
-   public void updateToy(Toy toy);
+   void updateToy(Toy toy);
 
-   public void deleteToy(int toyId);
+   void deleteToy(Toy toy);
 
-   public Toy[] getToys(Toy toy);
+   Toy[] getToys();
+}
+
+class AdminServiceImpl implements AdminService {
+   public static Toy[] toyArray = new Toy[5];
+   public static int count = 0;
+
+   @Override
+   public void addToy(Toy toy) {
+      toyArray[count] = toy;
+      count++;
+   }
+
+   public void updateToy(Toy toy) {
+      for (int i = 0; i <= count; i++) {
+         if (toyArray[i].getToyId() == toy.getToyId()) {
+            toyArray[i] = toy;
+            break;
+         }
+      }
+   }
+
+   public void deleteToy(Toy toy) {
+      for (int i = 0; i <= count; i++) {
+         if (toyArray[i].getToyId() == toy.getToyId()) {
+            toyArray[i] = null;
+            break;
+         }
+      }
+   }
+
+   public Toy[] getToys() {
+      return toyArray;
+   }
+
 }
 
 class Toy {
-   private int toyId;
-   private String toyName;
-   private String toyType;
-   private int minAge;
-   private int maxAge;
-   private float price;
-   private int quantity;
-   private float rentalAmount;
-   private float refundableDeposit;
+   private int toyId, minAge, maxAge, quantity;
+   private String toyName, toyType;
+   private double price, rentalAmount, refundableDeposit;
+
+   Toy(int id, String name, String type, int min, int max, double price, int quant, double rent, double refund) {
+      this.toyId = id;
+      this.toyName = name;
+      this.toyType = type;
+      this.minAge = min;
+      this.maxAge = max;
+      this.price = price;
+      this.quantity = quant;
+      this.rentalAmount = rent;
+      this.refundableDeposit = refund;
+   }
 
    public int getToyId() {
       return toyId;
@@ -29,22 +69,6 @@ class Toy {
 
    public void setToyId(int toyId) {
       this.toyId = toyId;
-   }
-
-   public String getToyName() {
-      return toyName;
-   }
-
-   public void setToyName(String toyName) {
-      this.toyName = toyName;
-   }
-
-   public String getToyType() {
-      return toyType;
-   }
-
-   public void setToyType(String toyType) {
-      this.toyType = toyType;
    }
 
    public int getMinAge() {
@@ -63,14 +87,6 @@ class Toy {
       this.maxAge = maxAge;
    }
 
-   public float getPrice() {
-      return price;
-   }
-
-   public void setPrice(float price) {
-      this.price = price;
-   }
-
    public int getQuantity() {
       return quantity;
    }
@@ -79,139 +95,119 @@ class Toy {
       this.quantity = quantity;
    }
 
-   public float getRentalAmount() {
+   public String getToyName() {
+      return toyName;
+   }
+
+   public void setToyName(String toyName) {
+      this.toyName = toyName;
+   }
+
+   public String getToyType() {
+      return toyType;
+   }
+
+   public void setToyType(String toyType) {
+      this.toyType = toyType;
+   }
+
+   public double getPrice() {
+      return price;
+   }
+
+   public void setPrice(double price) {
+      this.price = price;
+   }
+
+   public double getRentalAmount() {
       return rentalAmount;
    }
 
-   public void setRentalAmount(float rentalAmount) {
+   public void setRentalAmount(double rentalAmount) {
       this.rentalAmount = rentalAmount;
    }
 
-   public float getRefundableDeposit() {
+   public double getRefundableDeposit() {
       return refundableDeposit;
    }
 
-   public void setRefundableDeposit(float refundableDeposit) {
+   public void setRefundableDeposit(double refundableDeposit) {
       this.refundableDeposit = refundableDeposit;
    }
 
-   public Toy(int toyId, String toyName, String toyType, int minAge, int maxAge, float price, int quantity,
-         float rentalAmount, float refundableDeposit) {
-      this.toyId = toyId;
-      this.toyName = toyName;
-      this.toyType = toyType;
-      this.minAge = minAge;
-      this.maxAge = maxAge;
-      this.price = price;
-      this.quantity = quantity;
-      this.rentalAmount = rentalAmount;
-      this.refundableDeposit = refundableDeposit;
-   }
-
-   @Override
    public String toString() {
-      String result = "";
-      result += "ToyName: " + toyName + "\n";
-      result += "ToyType: " + toyType + "\n";
-      result += "Quantity: " + quantity + "\n";
-      result += "RentalAmount: " + rentalAmount;
-      return result;
-   }
-
-   public Toy() {
-
+      return ("Toy Name: " + this.toyName + "\nToy Type: " + this.toyType + "\nQuantity: " + this.quantity
+            + "\nRentalAmount: " + this.rentalAmount);
    }
 
 }
 
-class AdminServiceImpl implements AdminService {
-   public static Toy[] toyArray;
-   public static ArrayList<Toy> toys = new ArrayList<Toy>();
+class Source {
+   public static void main(String args[]) {
+      Scanner s = new Scanner(System.in);
+      int choice = s.nextInt();
+      int id, min, max, quantity;
+      String name, type;
+      double price, rent, refund;
+      Toy[] toys;
+      switch (choice) {
+         case 1:
+            if (s.hasNext()) {
+               id = s.nextInt();
+               name = s.next();
+               type = s.next();
+               min = s.nextInt();
+               max = s.nextInt();
+               price = s.nextDouble();
+               quantity = s.nextInt();
+               rent = s.nextDouble();
+               refund = s.nextDouble();
+               Toy t = new Toy(id, name, type, min, max, price, quantity, rent, refund);
+               AdminService adm = new AdminServiceImpl();
+               adm.addToy(t);
+               toys = adm.getToys();
+               for (int i = 0; i < toys.length; i++) {
+                  System.out.println(adm.toString());
+               }
+            }
+            break;
+         case 2:
+            id = s.nextInt();
+            name = s.next();
+            type = s.next();
+            min = s.nextInt();
+            max = s.nextInt();
+            price = s.nextDouble();
+            quantity = s.nextInt();
+            rent = s.nextDouble();
+            refund = s.nextDouble();
+            Toy t1 = new Toy(id, name, type, min, max, price, quantity, rent, refund);
+            AdminService adm1 = new AdminServiceImpl();
+            adm1.updateToy(t1);
+            System.out.println(adm1.toString());
+            break;
+         case 3:
+            id = s.nextInt();
+            name = s.next();
+            type = s.next();
+            min = s.nextInt();
+            max = s.nextInt();
+            price = s.nextDouble();
+            quantity = s.nextInt();
+            rent = s.nextDouble();
+            refund = s.nextDouble();
+            Toy t2 = new Toy(id, name, type, min, max, price, quantity, rent, refund);
+            AdminService adm2 = new AdminServiceImpl();
+            adm2.deleteToy(t2);
+            break;
+         case 4:
 
-   @Override
-   public void addToy(Toy toy) {
-      toys.add(toy);
-      updateToyArray();
-   }
-
-   @Override
-   public void deleteToy(int toyId) {
-      for (int i = 0; i < toys.size(); i++) {
-         if (toys.get(i).getToyId() == toyId) {
-            toys.remove(i);
-         }
+            AdminService adm3 = new AdminServiceImpl();
+            toys = adm3.getToys();
+            for (int i = 0; i < toys.length; i++) {
+               System.out.println(adm3.toString());
+            }
       }
-      updateToyArray();
+      s.close();
    }
-
-   @Override
-   public Toy[] getToys(Toy toy) {
-      return toyArray;
-   }
-
-   @Override
-   public void updateToy(Toy toy) {
-      for (int i = 0; i < toys.size(); i++) {
-         if (toys.get(i).getToyId() == toy.getToyId()) {
-            toys.set(i, toy);
-         }
-      }
-      updateToyArray();
-   }
-
-   public void display() {
-      for (Toy toy : toyArray) {
-         System.out.println(toy);
-      }
-   }
-
-   public static void updateToyArray() {
-      toyArray = new Toy[toys.size()];
-      int i = 0;
-      for (Toy t : toys) {
-         toyArray[i] = t;
-         i++;
-      }
-   }
-
-}
-
-public class Source {
-   String[][] toys = new String[5][5];
-
-   Source() {
-      toys[0][0] = "1";
-      toys[0][1] = "Stickle Bricks";
-
-      toys[1][0] = "2";
-      toys[1][1] = "Robot Dog";
-
-      toys[2][0] = "3";
-      toys[2][1] = "Magic 8 Ball";
-
-      toys[3][0] = "4";
-      toys[3][1] = "Juggling Clubs";
-
-      toys[4][0] = "5";
-      toys[4][1] = "Chutes and Ladders";
-
-   }
-
-   public static void main(String[] args) {
-      Scanner scanner = new Scanner(System.in);
-      int toyId = Integer.parseInt(scanner.nextLine());
-      String toyName = scanner.nextLine();
-      String toyType = scanner.nextLine();
-      int minAge = Integer.parseInt(scanner.nextLine());
-      int maxAge = Integer.parseInt(scanner.nextLine());
-      float price = Float.parseFloat(scanner.nextLine());
-      int quantity = Integer.parseInt(scanner.nextLine());
-      float rentalAmount = Float.parseFloat(scanner.nextLine());
-      float refundableDeposit = Float.parseFloat(scanner.nextLine());
-      Toy toy = new Toy(toyId, toyName, toyType, minAge, maxAge, price, quantity, rentalAmount, refundableDeposit);
-      AdminServiceImpl adminServiceImpl = new AdminServiceImpl();
-      adminServiceImpl.addToy(toy);
-      adminServiceImpl.display();
-   }
-
 }
