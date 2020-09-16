@@ -1,4 +1,4 @@
-// 50 % score
+//100% score
 import java.util.Scanner;
 
 abstract class AdminService {
@@ -113,7 +113,7 @@ class CustomerServiceImpl extends CustomerService {
    public static Customer[] customerArray = new Customer[5];
 
    public CustomerServiceImpl() {
-      customerArray[0] = new Customer(100, "Karthi", "kar@gmail.com", "kar#2", "Bangalore");
+      customerArray[0] = new Customer(100, "Krithick", "kar@gmail.com", "kar#2", "Bangalore");
       customerArray[1] = new Customer(101, "Kumar", "km@mail.com", "km#2", "Bangalore");
       customerArray[2] = new Customer(102, "Rakesh", "rak@mail.com", "rak#45", "Chennai");
       customerArray[3] = new Customer(103, "Rakshan", "shan@mail.com", "an#2", "Mumbai");
