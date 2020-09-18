@@ -12,7 +12,7 @@ class Node<X> {
 
    @Override
    public String toString() {
-      return "\tNode value=" + value + "\n";
+      return "\tNode value: " + value + "\n";
    }
 
 }
@@ -25,7 +25,7 @@ class DLL<X> {
    DLL(X value) {
       this.head = new Node<X>(value);
       this.tail = this.head;
-      length++;
+      this.length++;
    }
 
    // Adds element at the last
@@ -63,10 +63,11 @@ class DLL<X> {
       }
       Node<X> newNode = new Node<X>(value);
       Node<X> leader = this.traverseToIndex(index - 1);
+      Node<X> follower = leader.next;
       leader.next = newNode;
-      leader.next.prev = newNode;
+      follower.prev = newNode;
       newNode.prev = leader;
-      newNode.next = leader.next;
+      newNode.next = follower;
       this.length++;
    }
 
@@ -87,6 +88,7 @@ class DLL<X> {
          this.head.prev = null;
       } else {
          Node<X> leader = this.traverseToIndex(index - 1);
+         System.out.println(leader);
          System.out.println("Node deleted with value=" + leader.next.value);
          if (index == this.length - 1) {
             leader.next = null;
@@ -114,7 +116,6 @@ class DLL<X> {
 
       Node<X> newTail = this.head;
       Node<X> newHead = this.tail;
-
       Node<X> current = this.head;
       while (current != null) {
          Node<X> temp = current.prev;
@@ -135,13 +136,15 @@ class DLL<X> {
    Node<X> traverseToIndex(int index) {
       Node<X> leader = this.head;
       int iter = 0;
-      while (iter != index) {
-         leader = leader.next;
+      while (index != iter) {
          iter++;
+         leader = leader.next;
       }
       return leader;
    }
 
+   // displays the list
+   // linear time complexity
    @Override
    public String toString() {
       Node<X> leader = this.head;
@@ -163,12 +166,16 @@ class Main {
       doublyLinkedList.append("Orange");
       doublyLinkedList.append("Choco");
       System.out.println(doublyLinkedList);
-      // singleLinkedList.insert(2, "pineapple");
-      // System.out.println(singleLinkedList);
-      // singleLinkedList.remove(2);
-      // System.out.println(singleLinkedList);
-      // singleLinkedList.reverse();
-      // singleLinkedList.remove(0);
-      // System.out.println(singleLinkedList);
+      doublyLinkedList.insert(2, "kitkat");
+      System.out.println(doublyLinkedList);
+      doublyLinkedList.remove(2);
+      System.out.println(doublyLinkedList);
+      doublyLinkedList.reverse();
+
+      DLL<Integer> doublyLinkedList2 = new DLL<>(10);
+      doublyLinkedList2.append(25);
+      doublyLinkedList2.append(65);
+      System.out.println(doublyLinkedList2);
+      doublyLinkedList2.reverse();
    }
 }
