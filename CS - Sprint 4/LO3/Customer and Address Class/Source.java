@@ -1,7 +1,4 @@
-// not getting full points
-// if one can help, then go on :)
-// 50 %
-// test cases have syntax error XD
+// 100 % score
 
 import java.util.*;
 
@@ -80,7 +77,6 @@ class Customer {
    public void setEmail(String email) {
       this.email = email;
    }
-
 }
 
 class Address {
@@ -139,7 +135,6 @@ class Address {
       result += country;
       return result;
    }
-
 }
 
 public class Source {
