@@ -1,5 +1,5 @@
-// thanks to the person
-// I have not done this
+// thanks
+
 import java.util.*;
 import java.io.*;
 
