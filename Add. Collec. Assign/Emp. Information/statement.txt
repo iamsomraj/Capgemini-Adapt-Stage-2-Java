@@ -1,0 +1,30 @@
+Employee Service Implementation
+bookmark_border
+subject Codingcasino 100 points
+DESCRIPTION
+Environment Specifications & Instructions
+Allowed Languages
+Java7
+Java8
+Build Expectation
+Case Study: Employee Medical Insurance Scheme:
+
+By default, all employees in an organization will be assigned with a medical insurance scheme based on the salary range and designation of the employee. Refer the following table to find the eligible insurance scheme specific to an employee.
+Salary             | Designation      | Insurance scheme
+>5000 and < 20000  | System Associate | scheme c
+>=20000 and <40000 | Programmer       | scheme b
+>=40000            | Manager          | scheme a
+<5000              | Clerk            | no scheme
+Task
+On the basis of above case study implement a class to accept multiple employee details and store all employee objects in a HashMap. The functionalities need to be implemented are as follows:
+
+Add employee details to HashMap.
+Accept insurance scheme from user and display employee details based on Insurance scheme.
+Delete an employee details from map.
+Note: Refer the code stub for more clarity.
+
+IMPORTANT:
+
+ If you want to test your program you can implement a Main() method given in the stub and you can use RUN CODE to test your Main(), provided you have made valid function calls with valid data required.
+EXECUTION TIME LIMIT
+Default.
