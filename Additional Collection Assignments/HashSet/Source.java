@@ -1,23 +1,20 @@
 import java.util.*;
 
+
 public class Source {
-   public static Set<Integer> union(Set<Integer> setA, Set<Integer> setB) {
-      Set<Integer> result = new HashSet<Integer>(setA);
-      result.addAll(setB);
-      return result;
-   }
-
-   public static Set<Integer> intersect(Set<Integer> setA, Set<Integer> setB) {
-      Set<Integer> result = new HashSet<Integer>();
-      for (Integer x : setA)
-         if (setB.contains(x))
-            result.add(x);
-      return result;
-   }
-
-   public static Set<Integer> subtract(Set<Integer> setA, Set<Integer> setB) {
-      Set<Integer> result = new HashSet<Integer>(setA);
-      result.removeAll(setB);
-      return result;
-   }
+    public Set<Integer> union(Set<Integer> a, Set<Integer> b){
+        Set<Integer> union = new HashSet<Integer>(a);  
+        union.addAll(b);  
+        return union;
+    }
+    public Set<Integer> subtract(Set<Integer> a, Set<Integer> b){
+        Set<Integer> difference = new HashSet<Integer>(a);  
+        difference.removeAll(b);   
+        return difference;
+    }
+    public Set<Integer> intersect(Set<Integer> a, Set<Integer> b){
+        Set<Integer> intersection = new HashSet<Integer>(a);  
+        intersection.retainAll(b);  
+        return intersection;
+    }
 }
