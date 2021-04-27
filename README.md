@@ -8,7 +8,7 @@ This is a repository, containing the solutions of Adapt - Stage 2 - Java . I hav
 2. Dequeue
 3. Coding Solutions
 4. Sprint 3 Coding Solutions
-5. OOPS , Exceptional Handling And IO Operations ( in progress 😅 )
+5. OOPS , Exceptional Handling And IO Operations
 6. Sprint 4 Coding Solutions
 7. Sprint 5 Coding Solutions
 
